@@ -1,0 +1,5 @@
+build:
+  image: ruby:2.2-alpine
+  commands:
+    - apk --update add build-base openssl-dev
+    - bundle install
