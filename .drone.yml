@@ -10,3 +10,12 @@ publish:
     storage_driver: overlay
     token: >
       $$GCR_TOKEN
+notify:
+  webhook:
+    urls:
+      - https://aws-master-1.kontena.io/v1/services/aws-coreos/drone-demo/deploy
+    content_type: application/json
+    header:
+      Authorization: Bearer $$KONTENA_TOKEN
+    template: >
+      {}
