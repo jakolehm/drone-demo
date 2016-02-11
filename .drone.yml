@@ -5,6 +5,8 @@ build:
     - bundle install
 publish:
   gcr:
+    when:
+      branch: master
     registry: eu.gcr.io
     repo: potent-pursuit-88116/drone-demo
     storage_driver: overlay
@@ -12,6 +14,8 @@ publish:
       $$GCR_TOKEN
 notify:
   webhook:
+    when:
+      branch: master
     urls:
       - https://aws-master-1.kontena.io/v1/services/aws-coreos/drone-demo/deploy
     content_type: application/json
