@@ -3,3 +3,9 @@ build:
   commands:
     - apk --update add build-base openssl-dev
     - bundle install
+publish:
+  gcr:
+    registry: eu.gcr.io
+    repo: potent-pursuit-88116/drone-demo
+    token: >
+      $$GCR_TOKEN
