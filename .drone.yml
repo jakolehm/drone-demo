@@ -7,5 +7,6 @@ publish:
   gcr:
     registry: eu.gcr.io
     repo: potent-pursuit-88116/drone-demo
+    storage_driver: overlay
     token: >
       $$GCR_TOKEN
